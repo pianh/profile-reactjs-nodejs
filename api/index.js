@@ -27,8 +27,8 @@ app.get('/', (request, response)=> {
     response.send('Hello world')
 })
 
-app.get('/api/department', (request, response)=>{
-    var query = `SELECT * from Department`;
+app.get('/api/department',(request, response)=>{
+    var query=`SELECT * from Department`;
     connection.query(query, function(err, rows, fields){
         if(err){
             response.send('Failed');
@@ -36,3 +36,7 @@ app.get('/api/department', (request, response)=>{
         response.send(rows);
     })
 })
+
+
+
+
